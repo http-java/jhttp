@@ -43,7 +43,7 @@ import java.io.OutputStream;
  * @see EncodingException
  * @see DecodingException
  *
- * @author Daniel Meinicke (Laivy)
+ * @author Daniel Meinicke
  * @since 0.1
  */
 public interface HttpEncoding {

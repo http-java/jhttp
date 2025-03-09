@@ -12,7 +12,7 @@ package dev.jhttp.core.element;
  * Using the {@code Target} enum ensures that headers are correctly categorized, reducing the risk of misapplication
  * and enhancing the clarity of the HTTP handling logic.</p>
  *
- * @author Daniel Meinicke (Laivy)
+ * @author Daniel Meinicke
  * @since 0.1
  */
 public enum Target {

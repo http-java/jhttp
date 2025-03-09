@@ -16,7 +16,7 @@ import java.util.Objects;
  *
  * @param <T> the type of the value being weighted
  *
- * @author Daniel Meinicke (Laivy)
+ * @author Daniel Meinicke
  * @since 0.1
  */
 public interface Weight<T> {

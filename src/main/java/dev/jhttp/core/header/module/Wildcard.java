@@ -15,7 +15,7 @@ import java.util.Objects;
  *
  * @param <T> the type of the value that can be held by this wildcard
  *
- * @author Daniel Meinicke (Laivy)
+ * @author Daniel Meinicke
  * @since 0.1
  */
 public interface Wildcard<T> {

@@ -19,7 +19,7 @@ import java.util.Optional;
  *
  * @param <T> The type of data to be retrieved.
  *
- * @author Daniel Meinicke (Laivy)
+ * @author Daniel Meinicke
  * @since 0.1
  */
 public interface Deferred<T> {
