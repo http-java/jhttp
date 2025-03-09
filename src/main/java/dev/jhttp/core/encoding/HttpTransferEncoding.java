@@ -37,6 +37,9 @@ package dev.jhttp.core.encoding;
  * @see HttpEncoding
  * @see <a href="https://datatracker.ietf.org/doc/html/rfc2616">RFC 2616 (HTTP/1.1)</a>
  * @see <a href="https://datatracker.ietf.org/doc/html/rfc7230">RFC 7230 (HTTP/1.1 Message Syntax and Routing)</a>
+ *
+ * @author Daniel Meinicke (Laivy)
+ * @since 0.1
  */
 public interface HttpTransferEncoding extends HttpEncoding {
 }

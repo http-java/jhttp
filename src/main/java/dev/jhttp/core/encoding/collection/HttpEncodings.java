@@ -43,6 +43,9 @@ import java.util.Optional;
  * </p>
  *
  * @see HttpEncoding
+ *
+ * @author Daniel Meinicke (Laivy)
+ * @since 0.1
  */
 public interface HttpEncodings extends Collection<HttpEncoding> {
 

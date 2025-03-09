@@ -11,6 +11,9 @@ package dev.jhttp.core.element;
  * based on their target context. For example, some headers are only valid in requests while others are only valid in responses.
  * Using the {@code Target} enum ensures that headers are correctly categorized, reducing the risk of misapplication
  * and enhancing the clarity of the HTTP handling logic.</p>
+ *
+ * @author Daniel Meinicke (Laivy)
+ * @since 0.1
  */
 public enum Target {
 
