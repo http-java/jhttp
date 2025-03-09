@@ -7,6 +7,12 @@
     <groupId>dev.jhttp</groupId>
     <artifactId>core</artifactId>
     <version>0.1</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>source</module>
+        <module>utilities</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

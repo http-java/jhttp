@@ -1,4 +1,4 @@
-package dev.jhttp.core.header.module;
+package dev.jhttp.core.header.category;
 
 import dev.jhttp.core.header.exception.DeferredException;
 import org.jetbrains.annotations.NotNull;

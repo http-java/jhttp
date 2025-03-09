@@ -1,4 +1,4 @@
-package dev.jhttp.core.header.module;
+package dev.jhttp.core.header.category;
 
 import dev.jhttp.core.header.exception.WildcardValueException;
 import org.jetbrains.annotations.NotNull;

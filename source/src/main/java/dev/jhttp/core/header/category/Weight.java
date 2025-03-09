@@ -1,4 +1,4 @@
-package dev.jhttp.core.header.module;
+package dev.jhttp.core.header.category;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
