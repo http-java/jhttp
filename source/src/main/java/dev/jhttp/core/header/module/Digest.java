@@ -1,6 +1,5 @@
 package dev.jhttp.core.header.module;
 
-import codes.laivy.jhttp.body.HttpBody;
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

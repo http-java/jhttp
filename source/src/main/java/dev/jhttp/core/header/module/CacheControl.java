@@ -1,6 +1,6 @@
 package dev.jhttp.core.header.module;
 
-import dev.jhttp.core.element.Target;
+import dev.jhttp.core.header.Target;
 import dev.jhttp.utilities.KeyUtilities;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;

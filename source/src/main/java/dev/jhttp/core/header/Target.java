@@ -1,4 +1,4 @@
-package dev.jhttp.core.element;
+package dev.jhttp.core.header;
 
 /**
  * The {@code Target} enum defines the context in which an HTTP header is applicable.

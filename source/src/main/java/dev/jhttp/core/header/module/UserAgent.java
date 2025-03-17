@@ -1,6 +1,6 @@
 package dev.jhttp.core.header.module;
 
-import codes.laivy.jhttp.utilities.StringUtils;
+import dev.jhttp.utilities.StringUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

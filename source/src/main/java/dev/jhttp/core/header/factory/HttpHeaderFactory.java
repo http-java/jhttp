@@ -1,6 +1,6 @@
 package dev.jhttp.core.header.factory;
 
-import dev.jhttp.core.element.Target;
+import dev.jhttp.core.header.Target;
 import dev.jhttp.core.header.HttpHeader;
 import dev.jhttp.core.header.HttpHeader.Key;
 import dev.jhttp.core.header.collection.HttpHeaders;

@@ -1,6 +1,5 @@
 package dev.jhttp.core.header;
 
-import dev.jhttp.core.element.Target;
 import dev.jhttp.core.header.factory.HttpHeaderFactory;
 import dev.jhttp.core.header.factory.HttpHeaderParser;
 import org.jetbrains.annotations.Contract;

@@ -1,9 +1,8 @@
 package dev.jhttp.core.header.module;
 
-import codes.laivy.jhttp.element.HttpProtocol;
-import codes.laivy.jhttp.module.content.ContentSecurityPolicy;
-import codes.laivy.jhttp.url.Host;
-import codes.laivy.jhttp.url.domain.Domain;
+import codes.laivy.address.domain.Domain;
+import dev.jhttp.core.protocol.HttpProtocol;
+import dev.jhttp.core.url.Host;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -55,7 +54,7 @@ public class Location implements ContentSecurityPolicy.Source {
     }
     public static @NotNull Location parse(@NotNull String string) {
         if (validate(string)) try {
-            @Nullable Domain<?> domain = null;
+            @Nullable Domain domain = null;
             @NotNull URI uri;
 
             if (string.startsWith("/")) { // It's a path
@@ -90,23 +89,23 @@ public class Location implements ContentSecurityPolicy.Source {
         }
     }
 
-    public static @NotNull Location create(@Nullable Domain<?> domain, @NotNull URI uri) {
+    public static @NotNull Location create(@Nullable Domain domain, @NotNull URI uri) {
         return new Location(domain, uri);
     }
 
     // Object
 
-    private final @Nullable Domain<?> domain;
+    private final @Nullable Domain domain;
     private final @NotNull URI uri;
 
-    protected Location(@Nullable Domain<?> domain, @NotNull URI uri) {
+    protected Location(@Nullable Domain domain, @NotNull URI uri) {
         this.domain = domain;
         this.uri = uri;
     }
 
     // Getters
 
-    public @Nullable Domain<?> getDomain() {
+    public @Nullable Domain getDomain() {
         return domain;
     }
     public @NotNull URI getURI() {
