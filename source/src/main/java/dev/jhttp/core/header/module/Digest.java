@@ -1,5 +1,6 @@
 package dev.jhttp.core.header.module;
 
+import dev.jhttp.core.body.HttpBody;
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -16,6 +17,7 @@ public interface Digest {
 
     // Static initializers
 
+    // todo: Digest must have streams
     static @NotNull Digest create(@NotNull Algorithm algorithm, @NotNull HttpBody body) {
         return create(algorithm, body.toString());
     }

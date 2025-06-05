@@ -13,16 +13,16 @@ public final class CrossOrigin {
 
     // Classes
 
-    public enum EmbedderPolicy {
+    public enum EmbeddedPolicy {
 
         UNSAFE_NONE("unsafe-none"),
         REQUIRE_CORP("require-corp"),
-        CREDENTIALLESS("credentialless"),
+        CREDENTIAL_LESS("credentialless"),
         ;
 
         private final @NotNull String id;
 
-        EmbedderPolicy(@NotNull String id) {
+        EmbeddedPolicy(@NotNull String id) {
             this.id = id;
         }
 
@@ -32,8 +32,8 @@ public final class CrossOrigin {
 
         // Static initializers
 
-        public static @NotNull EmbedderPolicy getById(@NotNull String id) {
-            @NotNull Optional<EmbedderPolicy> optional = Arrays.stream(values()).filter(sameSite -> sameSite.getId().equalsIgnoreCase(id)).findFirst();
+        public static @NotNull CrossOrigin.EmbeddedPolicy getById(@NotNull String id) {
+            @NotNull Optional<EmbeddedPolicy> optional = Arrays.stream(values()).filter(sameSite -> sameSite.getId().equalsIgnoreCase(id)).findFirst();
             return optional.orElseThrow(() -> new NullPointerException("There's no embedder policy enum with id '" + id + "'"));
         }
 

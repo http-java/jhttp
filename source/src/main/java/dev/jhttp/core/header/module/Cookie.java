@@ -1,7 +1,6 @@
 package dev.jhttp.core.header.module;
 
-import codes.laivy.address.domain.Domain;
-import codes.laivy.address.host.HttpHost;
+import codes.laivy.address.host.DomainHost;
 import dev.jhttp.utilities.DateUtils;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
@@ -199,7 +198,8 @@ public class Cookie {
 
         // Object
 
-        private final @Nullable HttpHost<Domain> domain;
+        private final @Nullable DomainHost domain;
+
         private final @Nullable Instant expires;
         private final @Nullable Duration maxAge;
         private final @Nullable URI path;
@@ -209,7 +209,7 @@ public class Cookie {
         private final boolean partitioned;
         private final boolean secure;
 
-        private Request(@NotNull String name, @NotNull String value, @Nullable HttpHost<Domain> domain, @Nullable Instant expires, @Nullable Duration maxAge, @Nullable URI path, @Nullable SameSite sameSite, boolean httpOnly, boolean partitioned, boolean secure) {
+        private Request(@NotNull String name, @NotNull String value, @Nullable DomainHost domain, @Nullable Instant expires, @Nullable Duration maxAge, @Nullable URI path, @Nullable SameSite sameSite, boolean httpOnly, boolean partitioned, boolean secure) {
             super(name, value);
 
             this.domain = domain;
@@ -235,7 +235,7 @@ public class Cookie {
          *
          * @return the domain of the cookie, or {@code null} if not set
          */
-        public @Nullable HttpHost<Domain> getDomain() {
+        public @Nullable DomainHost getDomain() {
             return domain;
         }
 
@@ -373,7 +373,7 @@ public class Cookie {
             private final @NotNull String name;
             private final @NotNull String value;
 
-            private @Nullable HttpHost<Domain> domain;
+            private @Nullable DomainHost domain;
             private @Nullable Instant expires;
             private @Nullable Duration maxAge;
             private @Nullable URI path;
@@ -403,7 +403,7 @@ public class Cookie {
              * @return this builder
              */
             @Contract("_->this")
-            public @NotNull Builder domain(@NotNull HttpHost<Domain> domain) {
+            public @NotNull Builder domain(@NotNull DomainHost domain) {
                 this.domain = domain;
                 return this;
             }
@@ -558,7 +558,7 @@ public class Cookie {
                 @NotNull String name;
                 @NotNull String value;
 
-                @Nullable HttpHost<Domain> domain = null;
+                @Nullable DomainHost domain = null;
                 @Nullable Instant expires = null;
                 @Nullable Duration maxAge = null;
                 @Nullable URI path = null;
@@ -607,14 +607,7 @@ public class Cookie {
                         } else if (key.equalsIgnoreCase("samesite")) {
                             sameSite = SameSite.getById(data);
                         } else if (key.equalsIgnoreCase("domain")) {
-                            @NotNull HttpHost<?> host = HttpHost.parse(data);
-
-                            if (!(host.getAddress() instanceof Domain)) {
-                                throw new ParseException("invalid cookie request domain type '" + data + "'. The domain type must be a name domain!", 0);
-                            }
-
-                            //noinspection unchecked
-                            domain = (HttpHost<Domain>) host;
+                            domain = DomainHost.parse(data);
                         } else {
                             throw new ParseException("unknown cookie request parameter '" + key + "' with value '" + data + "'", 0);
                         }
